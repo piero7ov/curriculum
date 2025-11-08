@@ -1,0 +1,135 @@
+{
+  "datos_personales": {
+    "nombre": "José Piero",
+    "apellidos": "Olivares Velásquez",
+    "email": "piero7ov@gmail.com",
+    "telefono": "612539341",
+    "direccion": "C/ Embarcadero, 24, 46012 Valencia",
+    "fotografia":"pieroolivares.jpg",
+    "objetivo": "Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) con interés en iniciar carrera en el sector tecnológico. Poseo experiencia previa en entornos de alta presión (hostelería, actividades deportivas y seguridad acuática), lo que me ha permitido desarrollar competencias en resolución de problemas, gestión de tareas y trabajo en equipo. Me caracterizo por la responsabilidad, adaptabilidad y motivación por el aprendizaje continuo en el ámbito informático.",
+    "redes_sociales": [
+      {
+        "nombre": "Instagram",
+        "url": "www.instagram.com/piero1304_sw"
+      },
+      {
+        "nombre": "LinkedIn",
+        "url": "www.linkedin.com/in/piero7ov"
+      },
+      {
+        "nombre": "GitHub",
+        "url": "www.github.com/piero7ov"
+      }
+    ]
+  },
+  "experiencia_laboral": [
+    {
+      "inicio": "Julio 2025",
+      "final": "Julio 2025",
+      "localidad": "Valencia",
+      "empresa": "Aqualevante",
+      "cargo": "Socorrista (sustitución temporal)",
+      "responsabilidades": [
+        "Supervisión y vigilancia en piscinas comunitarias y de camping",
+        "Prevención de riesgos y atención a usuarios",
+        "Responsabilidad en situaciones críticas y toma de decisiones rápidas"
+      ]
+    },
+    {
+      "inicio": "Noviembre 2023",
+      "final": "Mayo 2025",
+      "localidad": "Valencia",
+      "empresa": "Bukami Inversiones (Restaurante KAMADO)",
+      "cargo": "Ayudante de cocina",
+      "responsabilidades": [
+        "Preparación de platos fríos y calientes",
+        "Trabajo bajo presión y colaboración en entornos de equipo",
+        "Organización de partidas y gestión de tiempos en cocina"
+      ]
+    },
+    {
+      "inicio": "Enero 2019",
+      "final": "Mayo 2023",
+      "localidad": "Valencia",
+      "empresa": "Pizzería Di Marco (Dasi Ruiz, Jorge)",
+      "cargo": "Ayudante de cocina",
+      "responsabilidades": [
+        "Preparación de platos y organización de cocina",
+        "Manejo de horno industrial",
+        "Planificación de producción y trabajo en equipo"
+      ]
+    },
+    {
+      "inicio": "Marzo 2021",
+      "final": "Junio 2021",
+      "localidad": "Valencia",
+      "empresa": "Bunker Valencia S.L.",
+      "cargo": "Monitor de escalada",
+      "responsabilidades": [
+        "Dinamización de grupos y enseñanza de técnicas básicas",
+        "Planificación de sesiones y orientación a usuarios",
+        "Gestión de actividades y control de materiales deportivos"
+      ]
+    },
+    {
+      "inicio": "Marzo 2017",
+      "final": "Diciembre 2018",
+      "localidad": "El Saler, Valencia",
+      "empresa": "Pizzería Di Marco (Dasi Ruiz, Jorge)",
+      "cargo": "Camarero",
+      "responsabilidades": [
+        "Servicio en sala y terraza",
+        "Atención y asesoramiento a clientes sobre la carta",
+        "Gestión de tiempos y coordinación con cocina"
+      ]
+    }
+  ],
+  "formacion": [
+    {
+      "inicio": "2025",
+      "final": "En curso",
+      "entidad": "Instituto TAME",
+      "titulo": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)"
+    },
+    {
+      "inicio": "2019",
+      "final": "2021",
+      "entidad": "IES Districte Marítim",
+      "titulo": "Grado Superior en Enseñanza y Animación Socio-Deportiva (TSEAS)"
+    },
+    {
+      "inicio": "2017",
+      "final": "2018",
+      "entidad": "IES El Saler",
+      "titulo": "Bachillerato de Humanidades y Ciencias Sociales"
+    }
+  ],
+  "habilidades_informaticas": [
+    "HTML, CSS, JavaScript",
+    "SQL y bases de datos (MySQL, SQLite)",
+    "Java (en formación)",
+    "Python, PHP (nivel básico)",
+    "Ofimática (Word, Excel, PowerPoint)",
+    "Gestión básica de redes y sistemas Windows"
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo",
+      "porcentaje":"100"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "Conversacional",
+      "porcentaje":"70"
+    }
+  ],
+  "competencias_personales": [
+    "Aprendizaje rápido",
+    "Comunicación efectiva",
+    "Resolución de problemas en entornos de presión",
+    "Organización y planificación de tareas",
+    "Trabajo en equipo y adaptabilidad"
+  ]
+}
+

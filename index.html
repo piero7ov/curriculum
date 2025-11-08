@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Curriculum Piero Olivares</title>
+    <meta charset="utf-8">
+    <style>
+      *{
+        margin:0px;
+        padding:0px;
+      }
+      body,html{
+        background:black;
+        font-size: 12px;
+      }
+      main{
+        width:800px;
+        background:white;
+        margin:auto;
+        display: flex;
+        font-family: "Trebuchet MS", "Segoe UI", Tahoma, Geneva, Verdana, Arial, sans-serif;
+      }
+      #izquierda{
+        background-color:#00A2BD;
+        background-image: url("fondo.png");
+        background-size: cover;
+        flex:1.7;
+        padding:40px;
+        color:white;
+      }
+      #derecha{
+        flex:3;
+        padding:40px;
+      }
+      #izquierda img {
+        width: 75%;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white; 
+      }
+      #derecha article{
+        border-bottom:2px solid #00A2BD;
+        padding-bottom: 10px;
+      }
+      #izquierda article{
+        border-bottom:2px solid white;
+        padding-bottom: 10px;
+      }
+      #idiomas {
+        border-top:2px solid #00A2BD;
+        padding-top: 10px;
+      }
+      #izquierda,#derecha,#experiencia_laboral,#formacion, #idiomas,#habilidades,#datos_personales, #competencias,#objetivo_descripcion,#redes{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+      }
+      h2{
+        text-transform: uppercase;
+      }
+      h1{
+        font-size: 39px;
+        color:#00A2BD;
+      }
+      progress {
+        display: block; 
+        margin-top: 5px;
+        width: 100%;
+      }
+      /* Color de fondo de la barra */
+      progress::-webkit-progress-bar {
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      /* Color de la parte completada (WebKit: Chrome, Edge, Safari) */
+      progress::-webkit-progress-value {
+        background:#00A2BD;
+        border-radius: 10px;
+      }
+      
+      p{
+        text-align: justify;
+      }
+    </style>
+  </head>
+<body>
+    <main>
+      <section id="izquierda">
+        <img src="pieroolivares.jpeg" alt="Fotografia">
+      <section id ="datos_personales">
+        <h2>Datos personales</h2>
+        <article>
+          <ul>
+            <li>Email: <span id="email"></span></li>
+            <li>Telefono: <span id="telefono"></span></li>
+            <li>Direccion: <span id="direccion"></span></li>
+          </ul>
+        </article>
+        </section>
+      <section id="competencias">
+      <h2>Competencias Personales</h2>
+        <article>
+          <ul id="competencias_personales">
+ 
+          </ul>
+        </article>
+      </section>
+
+      <section id="objetivo_descripcion">
+        <h2>Objetivo Profesional</h2>
+        <article>
+            <p id ="objetivo">Texto de mi objetivo</p>
+        </article>
+      </section>
+        
+      <section id="redes">
+        <h2>Redes Sociales</h2>
+          <article>
+          <ul id="redes_sociales">
+
+          </ul>
+        </article>
+      </section>
+    </section>
+      
+ <section id="derecha">
+        <h1></h1>
+        <section id="idiomas">
+        <h2>Idiomas</h2>
+        <article>
+          <ul id="idiomas_lista">
+
+          </ul>
+        </article>
+        </section>
+        <section id="habilidades">
+           <h2>Habilidades informaticas</h2>
+        <article>
+          <ul id="habilidades_informaticas">
+
+          </ul>
+        </article>
+        </section>
+        <section id="experiencia_laboral">
+          <h2>Experiencia Laboral</h2>
+          <!--
+          <article>
+            <p>Inicio - final</p>
+            <h4>Empresa</h4>
+            <p>Localidad</p>
+            <p>Cargo</p>
+            <ul>
+              <li>Responsabilidad 1</li>
+              <li>Responsabilidad 2</li>
+              <li>Responsabilidad 3</li>
+            </ul>
+          </article>
+          -->
+        </section>
+        <section id="formacion">
+        <h2>Formación Académica</h2>
+          <!--
+          <article>
+            <p>Inicio - final</p>
+            <h4>Titulo</h4>
+            <p>Entidad</p>
+          </article>
+          -->
+        </section>
+      </section>
+    </main>
+  <script>
+    fetch("curriculum.json")
+    .then(function(respuesta){return respuesta.json();})
+    .then(function(datos){
+      console.log(datos);
+      ////////////////////////////////// BLOQUE DE ELEMENTOS UNICOS
+      // Bloque de hTML = bloque de JSON
+      document.querySelector("h1").textContent = datos.datos_personales.nombre+" "+datos.datos_personales.apellidos;
+      document.querySelector("#email").textContent = datos.datos_personales.email;
+      document.querySelector("#telefono").textContent = datos.datos_personales.telefono;
+      document.querySelector("#direccion").textContent = datos.datos_personales.direccion;
+      document.querySelector("#objetivo").textContent = datos.datos_personales.objetivo;
+      ////////////////////////////////// BLOQUE DE ELEMENTOS MULTIPLES
+      let contenedor = document.querySelector("#redes_sociales")
+      let redes = datos.datos_personales.redes_sociales
+      ////////////////////////////////// CREAMOS EL ELEMENTO
+      redes.forEach(function(red){
+        let elemento = document.createElement("li")
+      elemento.textContent = red.nombre+":"+ red.url
+      contenedor.appendChild(elemento)
+        })
+      
+      contenedor = document.querySelector("#idiomas_lista")
+      let idiomas = datos.idiomas
+      idiomas.forEach(function(idioma){
+        let elemento = document.createElement("li")
+      elemento.textContent = idioma.idioma+":"+ idioma.nivel
+      contenedor.appendChild(elemento)
+        
+      let progreso = document.createElement("progress")
+      progreso.value = idioma.porcentaje/100
+        elemento.appendChild(progreso)
+        })
+      
+      contenedor = document.querySelector("#competencias_personales")
+      let competencias_personales = datos.competencias_personales
+      competencias_personales.forEach(function(competencia){
+        let elemento = document.createElement("li")
+        elemento.textContent = competencia
+        contenedor.appendChild(elemento)
+      })
+      
+      contenedor = document.querySelector("#habilidades_informaticas")
+      let habilidades_informaticas = datos.habilidades_informaticas
+      habilidades_informaticas.forEach(function(habilidad){
+        let elemento = document.createElement("li")
+        elemento.textContent = habilidad
+        contenedor.appendChild(elemento)
+      })
+      ////////////////////////////////// EXPERIENCIA LABORAL
+      contenedor = document.querySelector("#experiencia_laboral");
+      let experiencia_laboral = datos.experiencia_laboral;
+      
+      experiencia_laboral.forEach(function(experiencia){
+        // Creamos el contenedor principal de cada experiencia
+        let article = document.createElement("article");
+
+        // Fechas: inicio - final
+        let pFechas = document.createElement("p");
+        pFechas.textContent = experiencia.inicio + " - " + experiencia.final;
+        article.appendChild(pFechas);
+
+        // Empresa
+        let h4Empresa = document.createElement("h4");
+        h4Empresa.textContent = experiencia.empresa;
+        article.appendChild(h4Empresa);
+
+        // Localidad
+        let pLocalidad = document.createElement("p");
+        pLocalidad.textContent = experiencia.localidad;
+        article.appendChild(pLocalidad);
+
+        // Cargo
+        let pCargo = document.createElement("p");
+        pCargo.textContent = experiencia.cargo;
+        article.appendChild(pCargo);
+
+        // Lista de responsabilidades
+        let listaResp = document.createElement("ul");
+        experiencia.responsabilidades.forEach(function(responsabilidad){
+          let elemento = document.createElement("li");
+          elemento.textContent = responsabilidad;
+          listaResp.appendChild(elemento);
+        });
+        article.appendChild(listaResp);
+
+        // Añadimos el artículo completo a la sección de experiencia laboral
+        contenedor.appendChild(article);
+      })
+      ////////////////////////////////// FORMACIÓN ACADÉMICA
+      contenedor = document.querySelector("#formacion");
+      let formacion = datos.formacion;
+
+      // Recorremos cada elemento del array
+      formacion.forEach(function(estudio){
+        // Creamos el artículo principal
+        let article = document.createElement("article");
+
+        // Fechas: inicio - final
+        let pFechas = document.createElement("p");
+        pFechas.textContent = estudio.inicio + " - " + estudio.final;
+        article.appendChild(pFechas);
+
+        // Título del estudio
+        let h4Titulo = document.createElement("h4");
+        h4Titulo.textContent = estudio.titulo;
+        article.appendChild(h4Titulo);
+
+        // Entidad educativa
+        let pEntidad = document.createElement("p");
+        pEntidad.textContent = estudio.entidad;
+        article.appendChild(pEntidad);
+
+        // Añadimos el artículo al contenedor principal
+        contenedor.appendChild(article);
+      })
+      });
+      
+  </script>
+  </body>
+</html>
