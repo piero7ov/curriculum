@@ -4,14 +4,10 @@
     "apellidos": "Olivares Velásquez",
     "email": "piero7ov@gmail.com",
     "telefono": "612539341",
-    "direccion": "C/ Embarcadero, 24, 46012 Valencia",
-    "fotografia":"pieroolivares.jpg",
+    "direccion": "Valencia, España 46012",
+    "fotografia": "pieroolivares.jpg",
     "objetivo": "Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) con interés en iniciar carrera en el sector tecnológico. Poseo experiencia previa en entornos de alta presión (hostelería, actividades deportivas y seguridad acuática), lo que me ha permitido desarrollar competencias en resolución de problemas, gestión de tareas y trabajo en equipo. Me caracterizo por la responsabilidad, adaptabilidad y motivación por el aprendizaje continuo en el ámbito informático.",
     "redes_sociales": [
-      {
-        "nombre": "Instagram",
-        "url": "www.instagram.com/piero1304_sw"
-      },
       {
         "nombre": "LinkedIn",
         "url": "www.linkedin.com/in/piero7ov"
@@ -116,12 +112,12 @@
     {
       "idioma": "Español",
       "nivel": "Nativo",
-      "porcentaje":"100"
+      "porcentaje": "100"
     },
     {
       "idioma": "Inglés",
       "nivel": "Conversacional",
-      "porcentaje":"70"
+      "porcentaje": "70"
     }
   ],
   "competencias_personales": [
@@ -132,4 +128,3 @@
     "Trabajo en equipo y adaptabilidad"
   ]
 }
-
